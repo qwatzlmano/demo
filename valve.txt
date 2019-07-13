@@ -1,0 +1,19 @@
+
+/*Connect Solenoid Valve to digital pin 2*/
+int valve = 2;
+
+/*Connect one end of the wire to 3.3v or 5v of Arduino
+Other end of the wire to digital pin 3*/
+int wire = 3;
+
+void setup() {
+  pinMode(valve,OUTPUT);
+  pinMode(wire,OUTPUT);
+  }
+
+void loop() {
+  if(digitalRead(wire)==HIGH)
+    digitalWrite(valve,HIGH);
+  else
+    digitalWrite(valve,LOW);
+}
